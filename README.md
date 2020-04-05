@@ -15,7 +15,8 @@ Node modules used for testing
 
 ### Running application
 
-Setting up Database
+Setting up Database:
+
 This repo includes Postgresql backup file just import them in your pgAdmin
 Few details about Postgresql backup file if required during using this file
 DB name: blogdb
