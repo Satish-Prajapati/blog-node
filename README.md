@@ -57,11 +57,11 @@ For development environments...
 ```sh
 $ npm run dev
 ```
-Now
+Moving on frontend
 ```sh
 $ cd ../Frontend
 ```
-Open index.html file with your favorite browser
+Open index.html file with your favorite browser or with live server.
 Done!!
 
 ### Running Test
