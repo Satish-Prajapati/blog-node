@@ -15,6 +15,8 @@ Node modules used for testing
 
 ### Running application
 
+git clone https://github.com/Satish196/blog-node.git
+
 ##### Setting up Database:
 
 Create new database with name ```blogdb```
