@@ -39,10 +39,10 @@
 				<div class="collapse navbar-collapse" id="basicExampleNav">
 					<!-- Links -->
 					<ul class="navbar-nav mr-auto">
-						<li class="nav-item active">
+						<li class="nav-item">
 							<a class="nav-link" href="../index.html">Home</a>
 						</li>
-						<li class="nav-item">
+						<li class="nav-item active">
 							<a class="nav-link" href="index.html">Admin</a>
 						</li>
 					</ul>
@@ -70,12 +70,18 @@
 				</div>
 			</div>
 		</div>
+		<hr />
+		<!-- Comment display section -->
+		<h4 class="ml-5">Comments</h4>
+		<div class="col-md-10 col-sm-12 mx-auto" id="commentblock"></div>
+		<!-- Comment display section -->
 		<script src="../javascript/script.js"></script>
 
 		<script>
+			const id = getUrlVars()["id"];
 			//Fetch blog and generate html
 			const getBlog = async () => {
-				const id = getUrlVars()["id"];
+				// const id = getUrlVars()["id"];
 				const url = `http://localhost:3000/blogs/find/${id}`;
 				const response = await fetch(url);
 				const data = await response.json();
@@ -162,6 +168,48 @@
 					}
 				}
 			});
+			//Function for comment generator
+			function updateComment() {
+				const getComments = async () => {
+					const url = `http://localhost:3000/comments/find/${id}`;
+					const response = await fetch(url);
+					const data = await response.json();
+					// console.log(data);
+					return data;
+				};
+
+				getComments().then((data) => {
+					// console.log(data);
+					const comment = document.getElementById("commentblock");
+					let commentHTML = "";
+					for (i in data) {
+						console.log(data[i]);
+						commentHTML += `<div class="my-4 pb-1">
+								<p>${data[i].comment}</p>
+								<small class="text-right">${data[i].createdAt}</small> <br />
+								<button class="deletecomment btn btn-outline-danger" id="" data-id="${data[i].id}">Delete</button>
+							</div>`;
+					}
+					comment.innerHTML = commentHTML;
+					// editListner();
+					deleteListner();
+				});
+			}
+			updateComment();
+			//Function for comment deletion
+			function deleteListner() {
+				const delcomm = document.getElementsByClassName("deletecomment");
+				for (let i = 0; i < delcomm.length; i++) {
+					var dc = delcomm[i];
+					dc.addEventListener("click", (e) => {
+						fetch(
+							`http://localhost:3000/comments/delete?id=${e.target.dataset.id}`
+						);
+						// updateComment();
+						e.target.parentElement.remove();
+					});
+				}
+			}
 			$("img").on("error", function () {
 				$(this).attr("src", "http://satishprajapati.tech/asserts/bl.jpg");
 			});

@@ -40,10 +40,10 @@
 			<div class="collapse navbar-collapse" id="basicExampleNav">
 				<!-- Links -->
 				<ul class="navbar-nav mr-auto">
-					<li class="nav-item">
+					<li class="nav-item active">
 						<a class="nav-link" href="../index.html">Home</a>
 					</li>
-					<li class="nav-item active">
+					<li class="nav-item">
 						<a class="nav-link" href="index.html">Admin</a>
 					</li>
 				</ul>
@@ -86,19 +86,6 @@
 			</div>
 		</div>
 		<script>
-			function bntevntList() {
-				var del = document.getElementsByClassName("btn-outline-danger");
-				for (let i = 0; i < del.length; i++) {
-					var delDOM = del[i];
-					delDOM.addEventListener("click", (e) => {
-						fetch(
-							`http://localhost:3000/blogs/delete?id=${e.target.dataset.id}`
-						);
-						e.target.parentElement.parentElement.remove();
-					});
-				}
-			}
-
 			//Fetch all blogs and generate blog card with buttons to update and delete
 			const getBlogs = async () => {
 				const response = await fetch("http://localhost:3000/blogs");
@@ -130,14 +117,14 @@
 							Update
 						</button>
 					</a>
-			                 <button type="button" data-id="${data[i].id}" class="btn btn-outline-danger" class="deletebtn" id="delete">Delete</button>
+					<a href="http://localhost:3000/blogs/delete?id=${data[i].id}">
+						<button type="button" class="btn btn-outline-danger" id="delete">Delete</button>
+					</a>
 				</div>
 					</div>`;
 					}
-					bntevntList();
 				})
 				.catch((err) => {});
-
 			$("img").on("error", function () {
 				$(this).attr("src", "http://satishprajapati.tech/asserts/bl.jpg");
 			});
