@@ -21,7 +21,7 @@ Create new database with name ```blogdb```
 
 This repo includes Postgresql file. Import these files in your pgAdmin note: "Select format 'Directory', select Postgresql file directory in filename and select a user in rolename then click on Restore". 
 
-###### If any issue occur create DB & Table manually
+##### If any issue occur create DB & Table manually
 
 Table name : blogs
 
