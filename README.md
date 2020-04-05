@@ -17,10 +17,12 @@ Node modules used for testing
 
 Setting up Database:
 
-This repo includes Postgresql backup file just import them in your pgAdmin
-Few details about Postgresql backup file if required during using this file
+This repo includes Postgresql backup file import them in your pgAdmin. Few details about Postgresql backup file if required during using this file
+
 DB name: blogdb
+
 Username: satish
+
 Password: 4321
 
 
