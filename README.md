@@ -20,27 +20,19 @@ Node modules used for testing
 This repo includes Postgresql backup file import them in your pgAdmin. Few details about Postgresql backup file if required during using this file
 - DB name: blogdb
 - Username: satish
--Password: 4321
+- Password: 4321
 
 
-###### If any issue occur go with this step
+###### If any issue occur create DB & Table manually
 
-create 1st table: blogs
-Column & Datatype
-id -> serial (PK)
-title -> text
-blog -> Json
-thumbnail -> text
-createdAt -> Date
-updatedAt -> Date
+Table name : blogs
+![](Images/blog-tabel.png)
 
-create 2nd table: comments
-Column & Datatype
-id -> serial (Pk)
-comment -> text
-blogid -> Json (FK -> blogs.id(PK))
-createdAt -> Date
-updatedAt -> Date
+Table name : comments
+![](Images/comment-tabel.png)
+
+Now link blogid(comments) with id(blogs)
+![](Images/relationship.png)
 
 Now to make required changes in ```sh blog-node/Backend/config/database.js  ```
 
