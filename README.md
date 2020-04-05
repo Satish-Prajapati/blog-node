@@ -37,7 +37,7 @@ Now link blogid(comments) with id(blogs)
 
 ![](Images/relationship.png)
 
-Now to make required changes in ```sh blog-node/Backend/config/database.js  ```
+Now to make required changes in ```blog-node/Backend/config/database.js  ```
 
 Database setup done!!
 
