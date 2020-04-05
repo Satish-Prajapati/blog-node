@@ -26,12 +26,15 @@ This repo includes Postgresql backup file import them in your pgAdmin. Few detai
 ###### If any issue occur create DB & Table manually
 
 Table name : blogs
+
 ![](Images/blog-tabel.png)
 
 Table name : comments
+
 ![](Images/comment-tabel.png)
 
 Now link blogid(comments) with id(blogs)
+
 ![](Images/relationship.png)
 
 Now to make required changes in ```sh blog-node/Backend/config/database.js  ```
