@@ -22,10 +22,10 @@ router.get("/find/:id*", async (req, res) => {
 	const blog = await Blog.findByPk(req.params.id);
 	if (blog !== null) {
 		//Blog found
-		res.status(404).send(blog);
+		res.status(200).send(blog);
 	} else {
 		//Blog not found
-		res.status(200).send("Blog not found");
+		res.status(404).send("Blog not found");
 	}
 });
 
