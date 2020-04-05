@@ -19,7 +19,7 @@ Node modules used for testing
 
 Create new database with name ```blogdb```
 
-This repo includes Postgresql file. Import this files in your pgAdmin note: "Select format 'Directory', select Postgresql file directory in filename and select a user in rolename then click on Restore". 
+This repo includes Postgresql file. Import these files in your pgAdmin note: "Select format 'Directory', select Postgresql file directory in filename and select a user in rolename then click on Restore". 
 
 ###### If any issue occur create DB & Table manually
 
@@ -37,7 +37,7 @@ Now link blogid(comments) with id(blogs)
 
 Now change username and password in ```blog-node/Backend/config/database.js  ```
 
-Database setup done!!
+Database setup is done!!
 
 Moving on backend
 
@@ -77,11 +77,11 @@ This application includes 2 section
 - User
 - Admin
 
-In user section a user can view blog, create, delete & update comment
+In the user section, a user can view the blog, create, delete & update comment.
 
-In admin section the admin can create, update, delete blogs and admin can only delete comment
+In admin section, the admin can create, update, delete blogs and admin can only the delete comment.
 
-This blog application also support images and Youtube video you just need to paste url in editor
+This blog application also supports images and Youtube video you just need to paste URL in the editor
 
 ### Few screenshots
 ![](Images/p1.png)
