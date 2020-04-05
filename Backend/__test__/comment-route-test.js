@@ -19,7 +19,7 @@ app.get("/", (req, res) => {
 
 //Find all comment of a specific blog
 app.get("/find/:id*", (req, res) => {
-	console.log(req.params.id);
+	// console.log(req.params.id);
 	Comment.findAll({
 		where: {
 			blogid: req.params.id,
