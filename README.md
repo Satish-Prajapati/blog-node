@@ -15,18 +15,15 @@ Node modules used for testing
 
 ### Running application
 
-Setting up Database:
+##### Setting up Database:
 
 This repo includes Postgresql backup file import them in your pgAdmin. Few details about Postgresql backup file if required during using this file
-
-DB name: blogdb
-
-Username: satish
-
-Password: 4321
+- DB name: blogdb
+- Username: satish
+-Password: 4321
 
 
-If any issue occur go with this step
+###### If any issue occur go with this step
 
 create 1st table: blogs
 Column & Datatype
@@ -45,7 +42,7 @@ blogid -> Json (FK -> blogs.id(PK))
 createdAt -> Date
 updatedAt -> Date
 
-Now make required changes in ```sh blog-node/Backend/config/database.js  ```
+Now to make required changes in ```sh blog-node/Backend/config/database.js  ```
 
 Database setup done!!
 
